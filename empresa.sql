@@ -123,9 +123,7 @@ INSERT INTO `alocacao`(`matric`,`codigop`,`horas`)
 
 
 
-INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
-	VALUES(05,05,'Franciquim','M');
-    
+
 INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
 	VALUES(01,01,'Quindim','M');
     
@@ -137,6 +135,10 @@ INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
     
 INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
 	VALUES(04,04,'Joaninha','M');
+	
+INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
+	VALUES(05,05,'Franciquim','M');
+    
 
 
 
