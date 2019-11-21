@@ -55,3 +55,90 @@ ALTER TABLE projeto ADD CONSTRAINT fk_depart FOREIGN KEY (depart) REFERENCES dep
 ALTER TABLE alocacao ADD CONSTRAINT fk_matric FOREIGN KEY (matric) REFERENCES empregado(matricula);
 ALTER TABLE alocacao ADD CONSTRAINT fk_codigop FOREIGN KEY (codigop) REFERENCES projeto(codproj);
 ALTER TABLE dependente ADD CONSTRAINT fk_matricula FOREIGN KEY (matricula) REFERENCES empregado(matricula);
+
+
+-- POVOAMENTO
+
+
+INSERT INTO `empregado`(`matricula`,`nome`,`endereco`,`salario`,`supervisor`,`depto`)
+	VALUES(01,'Chico','Rua do Chico',2000,NULL,NULL);
+    
+INSERT INTO `empregado`(`matricula`,`nome`,`endereco`,`salario`,`supervisor`,`depto`)
+	VALUES(02,'Maria','Rua da Maria',2000,NULL,NULL);
+    
+INSERT INTO `empregado`(`matricula`,`nome`,`endereco`,`salario`,`supervisor`,`depto`)
+	VALUES(03,'Julia','Rua da Julia',2000,NULL,NULL);
+    
+INSERT INTO `empregado`(`matricula`,`nome`,`endereco`,`salario`,`supervisor`,`depto`)
+	VALUES(04,'Edvaldo','Rua do Edi',4000,NULL,NULL);
+    
+INSERT INTO `empregado`(`matricula`,`nome`,`endereco`,`salario`,`supervisor`,`depto`)
+	VALUES(05,'Aroldo','Rua do Aroldo',5000,NULL,NULL);
+	
+	
+INSERT INTO `departamento`(`coddep`,`nome`,`gerente`,`dataini`)
+	VALUES(01,'depA',04,'2010-01-20');
+    
+INSERT INTO `departamento`(`coddep`,`nome`,`gerente`,`dataini`)
+	VALUES(02,'depB',04,'2010-01-20');
+    
+INSERT INTO `departamento`(`coddep`,`nome`,`gerente`,`dataini`)
+	VALUES(03,'depC',05,'2010-01-20');
+    
+INSERT INTO `departamento`(`coddep`,`nome`,`gerente`,`dataini`)
+	VALUES(04,'depD',05,'2010-01-20');
+    
+INSERT INTO `departamento`(`coddep`,`nome`,`gerente`,`dataini`)
+	VALUES(05,'depE',05,'2010-01-20');
+	
+	
+INSERT INTO `projeto`(`codproj`,`nome`,`local`,`depart`)
+	VALUES(01,'projA','salaA',05);
+INSERT INTO `projeto`(`codproj`,`nome`,`local`,`depart`)
+	VALUES(02,'projB','salaB',01);
+INSERT INTO `projeto`(`codproj`,`nome`,`local`,`depart`)
+	VALUES(03,'projC','salaC',02);
+INSERT INTO `projeto`(`codproj`,`nome`,`local`,`depart`)
+	VALUES(04,'projD','salaD',03);
+INSERT INTO `projeto`(`codproj`,`nome`,`local`,`depart`)
+	VALUES(05,'projE','salaE',04);
+		
+
+
+
+INSERT INTO `alocacao`(`matric`,`codigop`,`horas`)
+	VALUES(01,01,30);
+    
+INSERT INTO `alocacao`(`matric`,`codigop`,`horas`)
+	VALUES(02,01,60);
+    
+INSERT INTO `alocacao`(`matric`,`codigop`,`horas`)
+	VALUES(03,02,90);
+    
+INSERT INTO `alocacao`(`matric`,`codigop`,`horas`)
+	VALUES(04,03,30);
+    
+INSERT INTO `alocacao`(`matric`,`codigop`,`horas`)
+	VALUES(05,04,120);
+
+
+
+INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
+	VALUES(05,05,'Franciquim','M');
+    
+INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
+	VALUES(01,01,'Quindim','M');
+    
+INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
+	VALUES(02,02,'Marquim','M');
+    
+INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
+	VALUES(03,03,'Peidim','M');
+    
+INSERT INTO `dependente`(`coddepend`,`matricula`,`nome`,`sexo`)
+	VALUES(04,04,'Joaninha','M');
+
+
+
+
+	
